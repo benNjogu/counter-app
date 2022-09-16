@@ -22,7 +22,15 @@ class Counter extends Component {
   }
 
   render() {
-    return <div>{this.renderTags()}</div>;
+    return (
+      /** when comparing an empty string using and operators it is a falsy but
+        a string with atleast one character is a truthy. 
+        number 0 is falsy. Any number but 0 is considered truthy*/
+      <div>
+        {this.state.tags.length === 0 && "Please create a new tag"}
+        {this.renderTags()}
+      </div>
+    );
   }
 }
 
