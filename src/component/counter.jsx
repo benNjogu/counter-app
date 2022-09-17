@@ -2,10 +2,11 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   /**
-   * An object that includes any data that this component needs.
-   */
-  /**
-   * props - a plain JS object that includes all the attributes that we set in counters component.
+   * PROPS vs STATES
+   * props includes data that we give to a component whereas state includes data that
+   * is local or private to that component.
+   *
+   * props is readOnly whereas state is
    */
   state = {
     value: this.props.value,
