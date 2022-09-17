@@ -10,7 +10,12 @@ class Counter extends Component {
   };
 
   handleIncrement() {
-    console.log("Increment clicked");
+    /**
+     * If this is called from an object method, it returns an object reference.
+     * If this is called from a standalone function, it returns the window object where if strict mode is
+     * enabled it returns undefined.
+     */
+    console.log("Increment clicked", this);
   }
 
   render() {
