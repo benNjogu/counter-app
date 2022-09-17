@@ -9,14 +9,14 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"],
   };
 
-  constructor() {
+  /*constructor() {
     super();
     this.handleIncrement = this.handleIncrement.bind(this);
-  }
+  }*/
 
-  handleIncrement() {
+  handleIncrement = () => {
     console.log("Increment clicked", this);
-  }
+  };
 
   render() {
     return (
