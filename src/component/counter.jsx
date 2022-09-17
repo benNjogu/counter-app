@@ -4,6 +4,9 @@ class Counter extends Component {
   /**
    * An object that includes any data that this component needs.
    */
+  /**
+   * props - a plain JS object that includes all the attributes that we set in counters component.
+   */
   state = {
     value: this.props.value,
   };
@@ -13,10 +16,8 @@ class Counter extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div>
-        <h4>{this.props.id}</h4>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           onClick={this.handleIncrement}
