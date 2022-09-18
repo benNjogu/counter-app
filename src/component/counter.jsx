@@ -1,28 +1,7 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  /**
-   * PROPS vs STATES
-   * props includes data that we give to a component whereas state includes data that
-   * is local or private to that component.
-   *
-   * props is readOnly whereas state is
-   */
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log("prevProvs", prevProps);
-    console.log("prevState", prevState);
-    if (prevProps.counter.value !== this.props.counter.value) {
-      //Ajax call and get new data from the server
-    }
-  }
-
-  componentWillUnmount() {
-    console.log("Component - unmount");
-  }
-
   render() {
-    console.log("Counter-rendered");
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
