@@ -9,6 +9,7 @@ class Counter extends Component {
    * props is readOnly whereas state is
    */
   render() {
+    console.log("Counter-rendered");
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
