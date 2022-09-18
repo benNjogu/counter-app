@@ -8,6 +8,15 @@ class Counter extends Component {
    *
    * props is readOnly whereas state is
    */
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("prevProvs", prevProps);
+    console.log("prevState", prevState);
+    if (prevProps.counter.value !== this.props.counter.value) {
+      //Ajax call and get new data from the server
+    }
+  }
+
   render() {
     console.log("Counter-rendered");
     return (
